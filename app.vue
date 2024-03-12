@@ -50,7 +50,6 @@ async function loadColumns() {
         text: colName.charAt(0).toUpperCase() + colName.slice(1),
         vue: true
       }));
-      console.log(columns)
       gridConfig.value.columns = columns;
     }
   } catch (error) {
