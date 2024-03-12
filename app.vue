@@ -39,7 +39,7 @@ const gridConfig = ref({
 
 async function loadColumns() {
   try {
-    const response = await fetch('http://localhost:3005/columns');
+    const response = await fetch(server + '/columns');
     if (!response.ok) {
       throw new Error('Network response was not ok');
     }
