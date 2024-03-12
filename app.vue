@@ -1,10 +1,11 @@
 <script setup>
-import { onMounted, ref } from 'vue';
-import { AjaxStore } from "@bryntum/grid";
-import { BryntumGrid } from "@bryntum/grid-vue-3";
+import {onMounted, ref} from 'vue';
+import {AjaxStore} from "@bryntum/grid";
+import {BryntumGrid} from "@bryntum/grid-vue-3";
 
 import '@bryntum/grid/grid.stockholm.css';
 
+const server = "https://vue3-bryntum-filter-error-server-2.guilherme-pinto.workers.dev"
 const gridConfig = ref({
   height: '100vh',
   store: new AjaxStore({
@@ -20,10 +21,10 @@ const gridConfig = ref({
     pageParamName: 'page',
     pageSizeParamName: 'limit',
     filterParamName: 'filter',
-    createUrl: 'http://localhost:3005/data',
-    readUrl: 'http://localhost:3005/data',
-    updateUrl: 'http://localhost:3005/data',
-    deleteUrl: 'http://localhost:3005/data',
+    createUrl: server + '/data',
+    readUrl: server + '/data',
+    updateUrl: server + '/data',
+    deleteUrl: server + '/data',
   }),
   bbar: {
     type: "pagingtoolbar"
