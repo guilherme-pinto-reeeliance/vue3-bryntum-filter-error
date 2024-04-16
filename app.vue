@@ -30,8 +30,7 @@ const gridConfig = ref({
     type: "pagingtoolbar"
   },
   features: {
-    filterBar: {},
-    quickFind: true,
+    filter: true,
     stripe: true,
   },
   columns: []
