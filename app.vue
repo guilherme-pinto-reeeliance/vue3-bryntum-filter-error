@@ -47,7 +47,6 @@ async function loadColumns() {
       const columns = data.data.map(colName => ({
         field: colName,
         text: colName.charAt(0).toUpperCase() + colName.slice(1),
-        vue: true
       }));
       gridConfig.value.columns = columns;
     }
