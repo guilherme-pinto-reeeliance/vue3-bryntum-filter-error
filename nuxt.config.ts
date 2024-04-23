@@ -4,6 +4,20 @@ export default defineNuxtConfig({
     devtools: { enabled: false },
 
     vite: {
+        build: {
+            rollupOptions: {
+                output: {
+                    manualChunks: (id) => {
+                        if (id.includes("/node_modules/@bryntum/grid/")) {
+                            return "bryntum-grid";
+                        }
+                        if (id.includes("/node_modules/@bryntum/grid-vue-3/")) {
+                            return "bryntum-grid-vue3";
+                        }
+                    }
+                }
+            }
+        },
         vue: {
             template: {
                 compilerOptions: {
