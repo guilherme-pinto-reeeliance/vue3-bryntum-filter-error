@@ -8,9 +8,14 @@ export default defineNuxtConfig({
             rollupOptions: {
                 output: {
                     manualChunks: (id) => {
-                        if (id.includes("/node_modules/@bryntum/grid/")) {
+                        if (id.includes("/node_modules/@bryntum/grid/")) console.log(id)
+                        if (id.includes("/node_modules/@bryntum/grid/grid.stockholm.css")) {
+                            return "bryntum-grid-css";
+                        }
+                        if (id.includes("/node_modules/@bryntum/grid/grid.module")) {
                             return "bryntum-grid";
                         }
+
                         if (id.includes("/node_modules/@bryntum/grid-vue-3/")) {
                             return "bryntum-grid-vue3";
                         }

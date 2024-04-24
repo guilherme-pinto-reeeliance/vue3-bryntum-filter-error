@@ -1,6 +1,6 @@
 <script setup>
 import {onMounted, ref} from 'vue';
-import {AjaxStore} from "@bryntum/grid";
+import AjaxStore from "@bryntum/grid/source/lib/Core/data/AjaxStore.js";
 import {BryntumGrid} from "@bryntum/grid-vue-3";
 
 import '@bryntum/grid/grid.stockholm.css';
