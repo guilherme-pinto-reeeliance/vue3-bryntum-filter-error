@@ -1,11 +1,12 @@
 <script setup>
 import {onMounted, ref} from 'vue';
-import AjaxStore from "@bryntum/grid/source/lib/Core/data/AjaxStore.js";
 import {BryntumGrid} from "@bryntum/grid-vue-3";
 
 import '@bryntum/grid/grid.stockholm.css';
+import {AjaxStore} from "@bryntum/grid";
 
 const server = "https://vue3-bryntum-filter-error-server-2.guilherme-pinto.workers.dev"
+const server_dev = "http://localhost:8787"
 const gridConfig = ref({
   height: '100vh',
   store: new AjaxStore({
